@@ -36,6 +36,10 @@ printf("3 - Acima de R$ 5.000\n");
 scanf("%d", &faixaSalarial);
 printf("Digite o seu salário bruto: R$ ");
 scanf("%f", &salarioBruto);
+if (salarioBruto < 0) {
+    printf("Salário inválido.\n");
+    return 1;
+    }
 imposto = calcularImposto(faixaSalarial, salarioBruto);
 if (imposto >= 0) {
 printf("O valor do imposto a ser pago é: R$ %.2f\n", imposto);
